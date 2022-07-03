@@ -6,6 +6,8 @@
         "package-lock.json": true,
         "public": true,
         ".vscode": true,
-        // "gitignore": true
+        ".gitignore":true,
+        "gitignore": true
+
     }
 }
