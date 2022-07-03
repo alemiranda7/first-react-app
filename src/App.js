@@ -9,11 +9,14 @@ function useRandom() {
 
 const App = () => {
     
-    
+    const estiloP = {
+        color: 'blue',
+        fontSize: '16rem'   
+    }    
 
     return (
         <>
-        {titulo}
+        <p style={estiloP}>{titulo}</p>
         
         <p className='random1' title='numero multiplicado por 100'>{random * 100}</p>
 
