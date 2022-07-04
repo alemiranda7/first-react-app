@@ -1,16 +1,31 @@
-import React from 'react'
-import ExComponents from './ExComponents'
+import React, { useState } from "react";
 
 const App = () => {
-    
-    return (
+  const [count, setCount] = useState(0);
 
-        <>
-        <ExComponents />
-        </>
+  return (
+    <>
+      <div>
+        <p>Voce clicou {count} vezes.</p>
+        <p>
+          <button
+            style={{ fontWeight: "bold" }}
+            onMouseMove={() => setCount(count + 1)}
+          >
+            +
+          </button>
+        </p>
+        <p>
+          <button
+            style={{ fontWeight: "bold" }}
+            onMouseMove={() => setCount(count - 1)}
+          >
+            -
+          </button>
+        </p>
+      </div>
+    </>
+  );
+};
 
-    )
-    
-}
-
-export default App
+export default App;
