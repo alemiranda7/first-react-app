@@ -1,29 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import Header from "./ModuleOneComponents/Header";
+import Home from "./ModuleOneComponents/Home";
+import Produtos from "./ModuleOneComponents/Produtos";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  let Pagina;
+  const { pathname } = window.location;
+  if (pathname === "/produtos") {
+    Pagina = Produtos;
+  } else {
+    Pagina = Home;
+  }
 
   return (
     <>
-      <div>
-        <p>Voce clicou {count} vezes.</p>
-        <p>
-          <button
-            style={{ fontWeight: "bold" }}
-            onMouseMove={() => setCount(count + 1)}
-          >
-            +
-          </button>
-        </p>
-        <p>
-          <button
-            style={{ fontWeight: "bold" }}
-            onMouseMove={() => setCount(count - 1)}
-          >
-            -
-          </button>
-        </p>
-      </div>
+      <Header />
+      <Pagina />
     </>
   );
 };
