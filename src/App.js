@@ -11,7 +11,6 @@ const App = () => {
   } else {
     Pagina = Home;
   }
-
   return (
     <>
       <Header />
