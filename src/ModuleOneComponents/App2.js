@@ -21,17 +21,12 @@ const produtos = [
   },
 ];
 
-
 const App2 = () => {
-    
-    const dados = produtos.filter({})
-  
-    return (
+  const dados = produtos.filter({});
 
+  return (
     <>
-      <div>
-        
-      </div>
+      <div></div>
     </>
   );
 };
